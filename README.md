@@ -1,6 +1,3 @@
-Here's your **README.md** file with relevant emojis for better engagement and visual appeal:  
-
-```markdown
 # ✈️ Kesari-act-Travel 🏝️
 
 A sleek React travel website that showcases interactive tours across India's most iconic destinations. 🌍✨
