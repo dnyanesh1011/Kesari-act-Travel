@@ -1,0 +1,216 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    height: 100vh;
+    /* Dark gradient background animation */
+    background: linear-gradient(45deg, #2c3e50, #000000);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    overflow-x: hidden;
+  }
+  
+  /* Gradient background animation keyframes */
+  @keyframes gradientBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Container and Title */
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 10px;
+  }
+  
+  .title {
+    border: 7px dashed #0111a0;
+    border-radius: 20px;
+    font-size: 3rem;
+    margin: 6vh;
+    padding: 1vh 5vw;
+    /* Pulsing border animation */
+    animation: pulse 2s infinite;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); /* white text shadow */
+  }
+  
+  .large-image {
+    width: 150px; /* Adjust this value as needed */
+    height: auto; /* Maintains aspect ratio */
+  }
+  
+  @keyframes pulse {
+    0% {
+      border-color: #0111a0;
+    }
+    50% {
+      border-color: #8b0000; /* Darker red replacing a brighter tone */
+    }
+    100% {
+      border-color: #0111a0;
+    }
+  }
+  
+  /* Cards Container with Fade-In */
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    max-width: 1300px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Card Styles with Hover Effects */
+  .card {
+    width: 400px;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    align-items: center;
+    background: #000; /* Replaced white with black */
+    color: #fff; /* Ensure text is readable on dark background */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+      0 0 10px rgba(255, 255, 255, 0.5), /* White glow shadow */
+      0 10px 20px rgba(0, 0, 0, 0.35);
+  }
+  
+  /* Image with Zoom on Hover */
+  .image {
+    width: 300px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .image:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Tour Info */
+  .tourInfo {
+    margin: 20px 5px;
+    text-align: center;
+  }
+  
+  .tourPrice {
+    color: #1faa59;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tourName {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6); /* white text shadow */
+  }
+  
+  /* Read More Link with Underline Animation */
+  .readMore {
+    color: #12b8c8;
+    text-transform: capitalize;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .readMore::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #12b8c8;
+    transition: width 0.3s ease;
+  }
+  
+  .readMore:hover {
+    color: #0e90d2;
+  }
+  
+  .readMore:hover::after {
+    width: 100%;
+  }
+  
+  /* Button Styles */
+  .btnRed {
+    text-align: center;
+    margin-top: 18px;
+    padding: 10px 80px;
+    border: 1px solid #b4161b;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(180, 22, 27, 0.13);
+    color: #b4161b;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .btnRed:hover {
+    background-color: #b4161b;
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  /* Refresh Container */
+  .refresh {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  /* Black Button Styles (formerly using white) */
+  .btnWhite {
+    margin-top: 18px;
+    padding: 10px 80px;
+    border: 1px solid #000; /* Replaced white with black */
+    background: transparent;
+    color: #000; /* Replaced white with black */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .btnWhite:hover {
+    background-color: #000; /* Keep dark on hover */
+    color: #fff; /* Contrast text on dark background */
+    transform: scale(1.05);
+  }
+  
