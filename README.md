@@ -100,4 +100,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 👨‍💻 Author  
 
-[dnyanesh1011](www.github.com/dnyanesh1011)
+[dnyanesh1011](https://www.github.com/dnyanesh1011)
